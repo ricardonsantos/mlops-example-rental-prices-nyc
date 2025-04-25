@@ -41,7 +41,7 @@ def go(config: DictConfig):
                 f"{config['main']['components_repository']}/get_data",
                 "main",
                 env_manager="conda",
-                version="master",
+                version="develop",
                 parameters={
                     "sample": config["etl"]["sample"],
                     "artifact_name": "sample.csv",
