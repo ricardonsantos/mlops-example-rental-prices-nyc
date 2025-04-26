@@ -41,7 +41,7 @@ def go(config: DictConfig):
                 f"{config['main']['components_repository']}/get_data",
                 "main",
                 env_manager="conda",
-                version="main",
+                version="develop",
                 parameters={
                     "sample": config["etl"]["sample"],
                     "artifact_name": "sample.csv",
@@ -88,7 +88,7 @@ def go(config: DictConfig):
                 f"{config['main']['components_repository']}/train_val_test_split", 
                 "main",
                 env_manager="conda",
-                version="main",
+                version="develop",
                 parameters={
                     "input": "clean_sample.csv:latest", 
                     "test_size": config["modeling"]["test_size"], 
