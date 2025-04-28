@@ -26,6 +26,8 @@ def go(args):
     valid_prices = df["price"].between(args.min_price, args.max_price)
     df_valid = df[valid_prices].copy() # remove outliers
     df_valid["last_review"] = pd.to_datetime(df_valid["last_review"])
+    idx = df_valid["longitude"].between(-74.25, -73.50) & df_valid["latitude"].between(40.5, 41.2) # new step to fix error with sample2.csv
+    df_valid = df_valid[idx].copy()
 
     # Persist cleaned data
     file_out = "clean_sample.csv"
