@@ -8,7 +8,7 @@ In this project you will build such a pipeline.
 
 ## Table of contents
 
-- [Introduction](#build-an-ML-Pipeline-for-Short-Term-Rental-Prices-in-NYC)
+- [Project Submission details](#project-submission-details)
 - [Preliminary steps](#preliminary-steps)
   * [Fork the Starter Kit](#fork-the-starter-kit)
   * [Create environment](#create-environment)
@@ -31,6 +31,12 @@ In this project you will build such a pipeline.
   * [Train the model on a new data sample](#train-the-model-on-a-new-data-sample)
 - [Cleaning up](#cleaning-up)
 
+## Project submission details
+
+[github public repo](https://github.com/ricardonsantos/mlops-example-rental-prices-nyc.git) for implemented code
+
+[wandb public repo](https://wandb.ai/rikchicfb-projects/nyc_airbnb) for generated artifacts and experiment tracking
+
 ## Preliminary steps
 ### Fork the Starter kit
 Go to [https://github.com/udacity/nd0821-c2-build-model-workflow-starter](https://github.com/udacity/nd0821-c2-build-model-workflow-starter)
@@ -38,13 +44,13 @@ and click on `Fork` in the upper right corner. This will create a fork in your G
 repository that is under your control. Now clone the repository locally so you can start working on it:
 
 ```
-git clone https://github.com/[your github username]/nd0821-c2-build-model-workflow-starter.git
+git clone https://github.com/ricardonsantos/mlops-example-rental-prices-nyc.git
 ```
 
 and go into the repository:
 
 ```
-cd nd0821-c2-build-model-workflow-starter
+cd mlops-example-rental-prices-nyc/
 ```
 Commit and push to the repository often while you make progress towards the solution. Remember 
 to add meaningful commit messages.
@@ -69,7 +75,7 @@ then paste your key into this command:
 
 You should see a message similar to:
 ```
-wandb: Appending key for api.wandb.ai to your netrc file: /home/[your username]/.netrc
+wandb: Appending key for api.wandb.ai to your netrc file: /home/rikchicfb/.netrc
 ```
 
 ### Cookie cutter
@@ -169,7 +175,7 @@ _ = mlflow.run(
             )
 ```
 where `config['main']['components_repository']` is set to 
-[https://github.com/udacity/nd0821-c2-build-model-workflow-starter#components](https://github.com/udacity/nd0821-c2-build-model-workflow-starter/tree/master/components).
+[https://github.com/ricardonsantos/mlops-example-rental-prices-nyc#components](https://github.com/ricardonsantos/mlops-example-rental-prices-nyc/tree/master/components).
 You can see the parameters that they require by looking into their `MLproject` file:
 
 - `get_data`: downloads the data. [MLproject](https://github.com/udacity/nd0821-c2-build-model-workflow-starter/blob/master/components/get_data/MLproject)
